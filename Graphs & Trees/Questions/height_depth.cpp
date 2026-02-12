@@ -13,7 +13,8 @@ int dfs(int vertex, int parent=0) {
 
 	for(int child : g[vertex]) {
 
-		if(child == parent) continue;
+		if(child == parent) continue; // in place of just the vis array there , we used it to skip the all the connected nodes , but here in this tree concept there , 
+		// there we only had the same connection betn the parent and its child thats it , we just skip that and we dont have there the need of vis there 
 
 		depth[child] = depth[vertex] + 1;
 
