@@ -25,6 +25,7 @@ vector<pair<int, int>> movements = {
     {-2, -1}, {2, -1}
 };
 
+
 int bfs(string source, string destination) {
     int srcX = convertX(source);
     int srcY = convertY(source);
