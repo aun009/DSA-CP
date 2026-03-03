@@ -8,7 +8,7 @@ void dfs(int vertex, int parent, vector<vector<int>> &g, vector<int> &A, vector<
         if (child == parent) continue;
 
         dfs(child, vertex, g, A, subtreeSum);
-        subtreeSum[vertex] += subtreeSum[child];
+        subtreeSum[vertex] += subtreeSum[child]; // calculate when coming upward
     }
 }
 
