@@ -1,58 +1,72 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-#define long long ll
-
-
-string process(string s1) {
-
-	string res = "";
-
-
-
-	for(auto ch : s1) {
-
-		if(ch == '#') {
-
-			if(!res.empty()) {
-				res.pop_back();
-			}
-
-			else {
-				res.push_back(ch);
-			}
-
-		}
-
-	}
-
-	return res;
-
-}
+// void solve() {
+    
+    
+    
+// }
 
 int main() {
-	
-	string s1, s2;
-	cin >> s1 >>s2;
+    // Fast I/O
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-	
-	string fs = process(s1);
-	string fs2 = process(s2);
+    // int t;
+    // cin >> t;
+    // while (t--) {
+    //     solve();
+    // }
 
-	if(s1.length() != s2.length()) {
 
-		cout << "NO" << endl;
-	}
+    cout << abs(int('A') - int('a')) << endl;
 
-	
-	if(s1.length() == s2.length()) {
+    cout << char('A' + 32) << endl;
 
-		
-		if(fs2 == fs) cout << "YES" << endl;
-	else cout << "NO" << '\n';
+    cout << char('a' - 32) << endl;
 
-	
-	}
+    char ch = 'A';
 
-	return 0;
+    ch = ch ^ 32;
+
+    cout<< ch << '\n';
+
+    // ch is now lowercase
+
+    ch = ch & '_';
+
+    cout <<ch << endl;
+
+
+    // now ch is in the uppercase
+
+    ch = ch | ' ';
+
+    cout << ch <<endl;
+
+
+
+    string str;
+    cin >> str;
+
+    for(auto ch : str) {
+
+    	cout << char(ch & '_');
+
+    }
+
+    cout << endl;
+
+    for(auto ch : str) {
+
+    	cout << char(ch | ' ');
+
+    }
+
+
+
+
+
+
+    return 0;
 }
